@@ -58,4 +58,14 @@ void Var2(int height)
 	}
 }
 
+void CheckVar(char* variant)
+{
+	while (variant[0] != 'y' && variant[0] != '1' && variant[0] != '0')
+	{
+		cout << "Enter normal variant\n";
+		cin.getline(variant, 10);
+
+		Check(variant);
+	}
+}
 
