@@ -42,4 +42,20 @@ void Var1(int height)
 	}
 }
 
+void Var2(int height)
+{
+	for (int i = 0; i <= height + 1; i++)
+	{
+		cout << setw(height - i + 2) << ' ';
+		for (int j = 0; j <= i * 2 - 1; j++)
+		{
+			if (j == i - 1)
+				cout << ' ';
+			else if (j != i)
+				cout << "#";
+		}
+		cout << endl;
+	}
+}
+
 
