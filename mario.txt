@@ -1,0 +1,45 @@
+#include <iostream>
+#include <iomanip>
+#include <cstring>
+using namespace std;
+
+void Var1(int height);
+void Var2(int height);
+void CheckVar(char* variant);
+void CheckHeight(char* height);
+void Check(char* variant);
+
+int main()
+{
+	char height[10];
+	char variant[10];
+
+	cout << "Enter height and variant build 0 - single, 1 - double\n";
+	cin >> height;
+	cin.getline(variant, 10);
+	CheckHeight(height);
+
+	Check(variant);
+
+	CheckVar(variant);
+
+	if (variant[0] == '0')
+		Var1(atoi(height));
+	else if (variant[0] == '1')
+		Var2(atoi(height));
+
+	system("pause");
+	return 0;
+}
+
+void Var1(int height)
+{
+	for (int i = 1; i <= height; i++)
+	{
+		cout << setfill(' ') << setw(height - i + 1) << " ";
+		cout << setfill('#') << setw((i)) << "#";
+		cout << "\n";
+	}
+}
+
+
