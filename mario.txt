@@ -2,12 +2,12 @@
 #include <iomanip>
 #include <cstring>
 using namespace std;
-
-void Var1(int height);
-void Var2(int height);
-void CheckVar(char* variant);
-void CheckHeight(char* height);
-void Check(char* variant);
+//coment
+void Var1(int height);//coment
+void Var2(int height);//coment
+void CheckVar(char* variant);//coment
+void CheckHeight(char* height);//coment
+void Check(char* variant);//coment
 
 int main()
 {
@@ -69,3 +69,20 @@ void CheckVar(char* variant)
 	}
 }
 
+void CheckHeight(char* height)
+{
+	while (!atoi(height) || height == 0)
+	{
+		cout << "Enter normal height\n";
+		cin >> height;
+	}
+}
+
+void Check(char* variant)
+{
+	while (strlen(variant) == 0)
+	{
+		cout << "Enter variant!\n";
+		cin.getline(variant, 10);
+	}
+}
