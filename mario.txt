@@ -28,6 +28,8 @@ int main()
 	else if (variant[0] == '1')
 		Var2(atoi(height));
 
+	cout<<"Goodbye\n";
+
 	system("pause");
 	return 0;
 }
